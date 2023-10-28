@@ -1,0 +1,36 @@
+"use strict";
+//treat all code as new version
+// affter this use only write new version of the javascript
+
+//String: Used for text. Enclosed in double or single quotes.
+let name = "Ashutosh";
+
+//Number: Used for numeric values. Can be whole numbers or decimals.
+let age = 18;
+
+//BigInt: Used for very large numbers.
+let bigNumber = 1234567890123456789012345678901234567890n;
+
+//Boolean: Represents true or false values.
+let isLoggedIn = false;
+
+//Undefined: A variable that has been declared but hasn't been assigned a value.
+let Gender;
+
+//Symbol: Used to create unique identifiers (not commonly used in everyday programming) used in react most
+let uniqueSymbol = Symbol("description");
+
+//object Type
+//Null: It's a special value that represents the absence of any object value.
+let temperature = null;
+
+//Object: Used to group related data and functions together.
+let person = {
+  name: "Ashutosh",
+  age: 18,
+};
+
+//You can check the data type of a variable using the typeof operator
+console.log(typeof name); // "string"
+console.log(typeof null); // "object"
+console.log(typeof state); // "undefined"
