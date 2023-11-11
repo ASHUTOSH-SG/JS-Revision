@@ -45,3 +45,35 @@ let my = {
 const myFunction = function () {
   console.log("nmaste");
 };
+
+//**********************MEMORY*************************************** */
+
+//Stack
+// All primitive data types are stored in the stack.
+// When using stack memory, a copy of the variable is created.
+// Any changes made affect only the copy, leaving the original unchanged.
+
+// Example of Stack
+let MyYouTubeName = "Ashutoshsg";
+let AnotherName = MyYouTubeName; // Copying the value
+AnotherName = "MrBeast"; // Modifying the copy
+
+console.log(AnotherName); // Output: MrBeast
+console.log(MyYouTubeName); // Output: Ashutoshsg (Original remains unchanged)
+
+//Heap
+// Non-primitive data types are stored in the heap.
+// When using heap memory, a reference to the variable is stored.
+// Any changes made through the reference affect the original value.
+
+// Example of Heap
+let userOne = {
+  email: "user@gmail.com",
+  upi: "123upi",
+};
+
+let userTwo = userOne; // Referencing the same object in the heap
+userTwo.email = "ashutoshsgangurde@gmail.com"; // also Modifying the original object
+
+console.log(userTwo.email); // Output: ashutoshsgangurde@gmail.com (Original is modified)
+console.log(userOne.email); // Output: ashutoshsgangurde@gmail.com (Both references point to the same object)
