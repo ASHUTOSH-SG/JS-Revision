@@ -1,0 +1,17 @@
+//immediately invoked function expressions (IIFE)
+//
+
+//named iife---------------------------------
+(function chai() {
+  console.log(`db connected`);
+})();
+//we use it to avoid the global scope pollution
+//first() defenation  second()
+
+//chai()
+
+//in arrow function--unnamed------------
+//always end this kind of function with ; to avoid execution contex problem
+((database) => {
+  console.log(`db connect ${database}`);
+})("mongo db");
