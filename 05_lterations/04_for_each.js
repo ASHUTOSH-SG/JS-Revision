@@ -1,6 +1,15 @@
 //most used for each :)
 const coding = ["js","py","c++","java"]
 
+coding.forEach((item)=>{
+   // console.log(item);
+   return item
+   //undefinr
+   //for each not return anything
+   //only used for conditions
+
+})
+
 //callback function = task to perfrom 
 // call back function  dont have name 
 coding.forEach(function (item){
@@ -48,3 +57,5 @@ mycoding.forEach( (item)=>{
      //you can access object like this directly
      // so you have extracted array's object's property 
 })
+
+
