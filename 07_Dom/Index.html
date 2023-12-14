@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Element Selection Example</title>
+</head>
+<body>
+
+  <p id="myParagraph" class="myClass">Hello, World!</p>
+
+  <script>
+    // Get element by ID
+    var elementById = document.getElementById('myParagraph');
+    console.log(elementById.textContent);
+
+    // Get elements by class name
+    // behind the scens the class is class name so we write class name
+    var elementsByClass = document.getElementsByClassName('myClass');
+    console.log(elementsByClass.length);
+
+    // Get elements by tag name
+    var elementsByTag = document.getElementsByTagName('p');
+    console.log(elementsByTag.length);
+
+    // Query selector
+    var querySelector = document.querySelector('#myParagraph');
+    console.log(querySelector.textContent);
+
+    // Query selector all
+    var querySelectorAll = document.querySelectorAll('.myClass');
+    console.log(querySelectorAll.length);
+
+    //get attribute
+
+    //set attribute
+
+    
+
+  </script>
+
+</body>
+</html>
+//
