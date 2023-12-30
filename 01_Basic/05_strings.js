@@ -38,7 +38,10 @@ console.log(string3.trim()); // Output: ashutosh@gmail.com
 // replace
 // Replaces spaces with an empty string
 const url = "google. com";
-console.log(url.replace(" ", "")); // Output: google.com
+console.log(url.replace(" ", "")); //only replace first occurrence string Output: google.com
+
+const url2 = "www. git hub. com";
+console.log(url2.replaceAll(" ", ""); //replace all strings Output: www.github.com
 
 // includes
 // Checks if a string contains another string
