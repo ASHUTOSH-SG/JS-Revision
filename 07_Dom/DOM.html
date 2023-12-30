@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Concepts</title>
+    <style>
+        /* Some basic styling for demonstration */
+        h1 {
+            color: blue;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Selection of an Element -->
+    <h1 id="myHeading">Hello, DOM!</h1>
+
+    <!-- 2. Changing HTML -->
+    <button onclick="changeHTML()">Change HTML</button>
+
+    <!-- Text Content -->
+    <p>This is a paragraph.</p>
+
+    <!-- 3. Changing CSS -->
+    <button onclick="changeCSS()">Change CSS</button>
+
+    <!-- 4. Event Listener -->
+    <button id="clickMe">Click Me</button>
+
+    <!-- Selecting Multiple Elements at Once -->
+    <p class="multiple">First Paragraph</p>
+    <p class="multiple">Second Paragraph</p>
+    <p class="multiple">Third Paragraph</p>
+
+    <!-- Set Timeout and Set Interval -->
+    <script>
+        // Introduction to DOM:
+        // Definition: The Document Object Model (DOM) is a programming interface for web documents.
+        // Purpose: DOM enables scripts to dynamically access and manipulate the content,
+        // structure, and style of a document.
+
+        // Four Pillars of DOM:
+
+        // 1. Selection of an Element:
+        const headingElement = document.querySelector("#myHeading");
+        // querySelector is a method that selects the first element in the document that matches
+
+        // 2. Changing HTML:
+        function changeHTML() {
+            headingElement.innerHTML = "HTML Changed!";
+        }
+
+        // Text Content:
+        const paragraph = document.querySelector("p");
+        const textContent = paragraph.textContent;
+        // textContent gets or sets the text content of an element, ignoring HTML tags.
+
+        // 3. Changing CSS:
+        // Changes the CSS properties of the selected element.
+        function changeCSS() {
+            headingElement.style.color = "red";
+            headingElement.style.backgroundColor = "black";
+        }
+
+        // 4. Event Listener:
+        // Adds an event listener to the button,
+        // triggering a function when the button is clicked.
+        const clickMeButton = document.getElementById("clickMe");
+        clickMeButton.addEventListener("click", function () {
+            console.log("Button clicked!");
+        });
+
+        // Selecting Multiple Elements at Once:
+        // querySelectorAll returns a NodeList,
+        // and forEach is used to iterate through the selected elements.
+        const allParagraphs = document.querySelectorAll(".multiple");
+        allParagraphs.forEach(paragraph => {
+            console.log(paragraph.textContent);
+        });
+
+        // Set Timeout and Set Interval:
+        // setTimeout executes a function after a specified delay
+        // setInterval repeatedly calls a function with a fixed time delay between each call.
+        setTimeout(function () {
+            console.log("Delayed message");
+        }, 2000); // 2000 milliseconds (2 seconds)
+
+        setInterval(function () {
+            console.log("Repeated message every 3 seconds");
+        }, 3000); // 3000 milliseconds (3 seconds)
+    </script>
+</body>
+</html>
